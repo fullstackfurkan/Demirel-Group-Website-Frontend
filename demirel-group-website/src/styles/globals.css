@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@theme {
+  --color-brand-yellow: #CAAF54;
+  --color-brand-gray: #A6A6A5;
+  --color-brand-black: #000000;
+}
