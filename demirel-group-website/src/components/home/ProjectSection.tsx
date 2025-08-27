@@ -63,7 +63,7 @@ export default function ProjectSection() {
     }
 
     return (
-        <section className="flex flex-col items-center bg-[url('/images/bg-image.png')] bg-cover bg-center">
+        <section className="flex flex-col items-center bg-[url('/images/bg-image.png')] bg-cover bg-center pb-8">
             {/* PROJECT CARDS */}
             <div className="pt-8">
                 {/* CARD HEADER */}
@@ -72,7 +72,7 @@ export default function ProjectSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-3">
                     {allProjects.map((project) => (
                         // CARD PHOTO
-                        <div key={project.projectName} className="cursor-pointer hover:shadow-brand-yellow shadow-xl rounded-lg transition-shadow duration-300  bg-white">
+                        <div key={project.projectName} className="lg:w-[25vw] cursor-pointer hover:shadow-brand-yellow shadow-xl rounded-lg transition-shadow duration-300  bg-white">
                             <div className="relative w-full h-64 overflow-hidden">
                                 <Image
                                 src={project.photoLink}

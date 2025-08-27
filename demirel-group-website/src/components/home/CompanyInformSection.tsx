@@ -1,65 +1,45 @@
 'use client'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
+import { faHelmetSafety, faCar, faCow } from "@fortawesome/free-solid-svg-icons";
 
 export default function CompanyInformSection() {
 
-    const allProjects = [
+    const allField = [
         { 
-            projectName: "Sanayi Dış",
-            photoLink: "/images/proje4/örnek1.jpg",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
-            location: "İstanbul Sanayi",
+            fieldName: "Demirel İnşaat",
+            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            icon: faHelmetSafety,
             href: "/projects/proje1"
          },
          { 
-            projectName: "Sanayi Dış1",
-            photoLink: "/images/proje4/örnek1.jpg",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
-            location: "İstanbul Sanayi",
+            fieldName: "Demirel Galeri",
+            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            icon: faCar,
             href: "/projects/proje1"
          },{ 
-            projectName: "Sanayi Dış2",
-            photoLink: "/images/proje4/örnek1.jpg",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
-            location: "İstanbul Sanayi",
+            fieldName: "Demirel Hayvancılık",
+            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            icon: faCow,
             href: "/projects/proje1"
          }
     ]
     return (
-        <section className="bg-[url('/images/bg-image.png')] bg-cover bg-center">
+        <section className="bg-[url('/images/biz-kimiz.png')] bg-black/90 bg-cover bg-center">
             <div className="pt-8">
-                {/* CARD HEADER */}
-                <div className="text-center text-3xl font-thin">PROJELERİMİZ</div>
-                {/* CARD CONTENT */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-3">
-                    {allProjects.map((project) => (
-                        // CARD PHOTO
-                        <div key={project.projectName} className="cursor-pointer hover:shadow-brand-yellow shadow-xl rounded-lg transition-shadow duration-300  bg-white">
-                            <div className="relative w-full h-64 overflow-hidden">
-                                <Image
-                                src={project.photoLink}
-                                alt="logo"
-                                fill
-                                className="object-cover rounded-t-lg"
-                            />
+                <div className="text-center text-xl text-brand-yellow font-thin">Demirel Group Hakkında</div>
+                <div className="text-center text-3xl text-white my-4 font-thin">BİZ KİMİZ? NELER YAPIYORUZ?</div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-3 p-5">
+                    {allField.map((project) => (
+                        <div key={project.fieldName} className="flex flex-col items-center cursor-pointer hover:shadow-brand-gray shadow-lg rounded-lg transition-shadow duration-300  bg-black text-white p-4">
+                            <div>
+                                <FontAwesomeIcon icon={project.icon} className="text-brand-yellow" size="3x"/>
                             </div>
-                            {/* CARD DETAİLS */}
-                            <div className="flex flex-col items-center p-4 font-thin">
-                                <div className="font-bold text-lg p-2">{project.projectName}</div>
-                                <div className="text-sm text-center">{project.content}</div>
-                                <hr className="border-t border-gray-400 w-full my-2"/>
-                                <div className="flex w-full justify-between text-sm text-gray-400 p-2">
-                                    <div className="flex">
-                                        <FontAwesomeIcon icon={faLocationDot} className="text-brand-yellow"/>
-                                        <div className="text-">{project.location}</div>
-                                    </div>
-                                    <div>0 544 444 44 44</div>
-                                </div>
-                            </div>
-                    </div>
+                            <div className="font-bold text-lg p-2">{project.fieldName}</div>
+                            <div className="text-sm text-center">{project.explanation}</div>    
+                            <div className="cursor-pointer text-brand-yellow mt-2">Devamı...</div>                 
+                        </div>
                     ))}
                 </div>
             </div>
