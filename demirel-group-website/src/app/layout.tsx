@@ -1,6 +1,7 @@
 import "../styles/globals.css"; 
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer";
 import MERRIWEATHER_SANS from "@/app/font"
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar/>
         <main className="min-h-screen">{children}</main>
+        <Footer/>
       </body>
     </html>
   );

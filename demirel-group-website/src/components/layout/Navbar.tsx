@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Navbar() {
     const navLinks = [
         { label: "Anasayfa", href: "/" },
-        { label: "Hakkımızda", href: "/hakkımızda" },
+        { label: "Hakkımızda", href: "/hakkimizda" },
         { label: "Projeler", href: "/projeler" },
         { label: "İletişim", href: "/iletişim" },
     ]
@@ -25,7 +25,7 @@ export default function Navbar() {
     return (
         <nav>
             {/* Logo */}  
-            <div className="flex justify-between items-center bg-brand-black shadow w-full py-4 px-[10%]">
+            <div className="flex justify-between items-center bg-[url('/images/biz-kimiz.png')] bg-black/90 bg-cover bg-center shadow w-full py-4 px-[10%]">
                 <div onClick={() => router.push("/")} className="cursor-pointer">
                 <Image 
                 src="/images/logo.png"
