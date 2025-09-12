@@ -14,7 +14,7 @@ export default function Footer() {
         { label: "Anasayfa", href: "/" },
         { label: "Hakkımızda", href: "/hakkimizda" },
         { label: "Projeler", href: "/projeler" },
-        { label: "İletişim", href: "/iletişim" },
+        { label: "İletişim", href: "/iletisim" },
     ]
 
     return (
@@ -45,7 +45,7 @@ export default function Footer() {
                     <div className="text-3xl font-thin">İletişim</div>
                     <div className="flex gap-2">
                         <FontAwesomeIcon icon={faPhone}/>
-                        <div className="font-bold">444 0 444</div>
+                        <div className="font-bold">0533 652 1107</div>
                     </div>
                   <div className="flex gap-3 mt-2">
                     <FontAwesomeIcon icon={faInstagram} />

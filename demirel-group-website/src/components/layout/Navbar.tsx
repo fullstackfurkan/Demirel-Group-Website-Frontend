@@ -12,7 +12,7 @@ export default function Navbar() {
         { label: "Anasayfa", href: "/" },
         { label: "Hakkımızda", href: "/hakkimizda" },
         { label: "Projeler", href: "/projeler" },
-        { label: "İletişim", href: "/iletişim" },
+        { label: "İletişim", href: "/iletisim" },
     ]
     const router = useRouter();
     const pathName = usePathname();

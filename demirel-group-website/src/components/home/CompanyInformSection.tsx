@@ -1,7 +1,7 @@
 'use client'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHelmetSafety, faCar, faCow } from "@fortawesome/free-solid-svg-icons";
+import { faHelmetSafety, faCar, faBuilding } from "@fortawesome/free-solid-svg-icons";
 
 export default function CompanyInformSection() {
 
@@ -18,9 +18,9 @@ export default function CompanyInformSection() {
             icon: faCar,
             href: "/projects/proje1"
          },{ 
-            fieldName: "Demirel Hayvancılık",
+            fieldName: "Demirel Gayrimenkul",
             explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
-            icon: faCow,
+            icon: faBuilding,
             href: "/projects/proje1"
          }
     ]
