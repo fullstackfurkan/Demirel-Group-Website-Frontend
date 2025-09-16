@@ -58,7 +58,7 @@ export default function ProjectSection() {
             {/* PROJECT CARDS */}
             <div className="pt-8">
                 {/* CARD HEADER */}
-                <div className="text-center text-3xl font-thin">PROJELERİMİZ</div>
+                <div className="text-center text-3xl font-thin mb-5">PROJELERİMİZ</div>
                 {/* CARD CONTENT */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-3">
                     {allProjects.map((project) => (

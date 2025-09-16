@@ -43,9 +43,16 @@ export default function Footer() {
 
                 <div className="text-white">
                     <div className="text-3xl font-thin">İletişim</div>
-                    <div className="flex gap-2">
-                        <FontAwesomeIcon icon={faPhone}/>
-                        <div className="font-bold">0533 652 1107</div>
+                    <div className="mt-2">                        
+                        <div className="flex gap-2">
+                            <FontAwesomeIcon icon={faPhone}/>
+                            <div className="font-bold">0533 652 1107</div>
+                        </div>
+
+                        <div className="flex gap-2">
+                            <FontAwesomeIcon icon={faPhone}/>
+                            <div className="font-bold">0537 217 7918</div>
+                        </div>
                     </div>
                   <div className="flex gap-3 mt-2">
                     <FontAwesomeIcon icon={faInstagram} />

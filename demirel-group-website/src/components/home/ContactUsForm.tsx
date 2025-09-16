@@ -16,7 +16,7 @@ export default function ContactUsForm() {
     return (
             <section className="bg-brand-black md:h-76  w-[90vw] mt-6 p-10">
                 <div className="text-white text-xl text-center md:text-start">
-                    Sizde Demirel Group Projelerinde <div className="text-brand-yellow inline-block"> Yerinizi Alın...</div>
+                    Sizde Demirel Grup Projelerinde <div className="text-brand-yellow inline-block"> Yerinizi Alın...</div>
                 </div>
 
                 <div className="mt-6">
