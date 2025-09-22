@@ -1,6 +1,20 @@
-import Image from "next/image"
+'use client';
+
+import { CompanyInformationType } from "@/types";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Hakkımızda() {
+    
+    const [companyData, setCompanyData] = useState<CompanyInformationType>();
+
+    useEffect(() => {
+        fetch('https://localhost:7048/CompanyInformation')
+        .then(res => res.json())
+        .then(data => setCompanyData(data))
+        .catch(err => console.error(err));
+    }, []);
+
     return(
         <section>
             {/* BACKGROUND IMAGE */}
@@ -19,7 +33,7 @@ export default function Hakkımızda() {
                             className='object-cover bg-brand-black relative z-10 p-5 mt-5 md:mt-0'
                             />
                         </div>
-                        <h3 className="text-brand-yellow text-xl mb-3 font-bold">Demireller Grup</h3>
+                        <h3 className="text-brand-yellow text-xl mb-3 font-bold">{companyData?.companyName}</h3>
                         <h2 className="text-3xl mb-3">HAKKIMIZDA</h2>
                         <p>Türkiye’de inşaat sektörünün öncüsü olma vizyonuyla yola çıkan Demirel Grup İnşaat, sahip olduğu güçlü insan kaynağı ve teknolojiye yaptığı yatırımlar sayesinde her gün insanların yaşamlarını iyileştirmeyi hedeflemektedir.</p>
                         <br />

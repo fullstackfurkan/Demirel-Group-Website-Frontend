@@ -1,0 +1,25 @@
+export type CompanyInformationType = {
+    id: number,
+    aboutUsText: string,
+    companyAdress: string, 
+    companyEmail: string,
+    companyName: string,
+    contactNumber1: string,
+    contactNumber2: string,
+    footerText: string
+}
+
+export type Project = {
+    id: number,
+    title: string,
+    category: string,
+    startDate: Date,
+    endDate: Date,
+    area: string,
+    apartmentType: string,
+    numberOfApartment: number,
+    numberOfStore: number,
+    contactNumber: string,
+    details: string,
+    photos: string[]
+};

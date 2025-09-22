@@ -1,9 +1,23 @@
+'use client';
+
 import ContactUsForm from "@/components/home/ContactUsForm";
 import Map from "@/components/home/Map";
+import { CompanyInformationType } from "@/types";
 import { faLocationDot, faMugHot, faPhone, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
-export default function İletisim() {
+export default function Iletisim() {
+
+    const [companyData, setCompanyData] = useState<CompanyInformationType>();
+
+    useEffect(() => {
+        fetch('https://localhost:7048/CompanyInformation')
+        .then(res => res.json())
+        .then(data => setCompanyData(data))
+        .catch(err=> console.error(err));
+    }, [])
+
     return (
         <section>
             <div className="flex flex-col justify-center items-center my-10">
@@ -15,7 +29,7 @@ export default function İletisim() {
                         <p className="p-3">Haftanın her günü ofisimize uğrayabilirsiniz. Sizinle tanışmayı çok isteriz.</p>
                         <div className="flex items-center">
                             <FontAwesomeIcon icon={faLocationDot} className="text-brand-yellow" size="2x"/>
-                            <div className="font-thin">Dereağzı, 6001. Sk. No:46, 59740 Marmaraereğlisi/Tekirdağ</div>
+                            <div className="font-thin">{companyData?.companyAdress}</div>
                         </div>
                     </div>
 
@@ -25,7 +39,7 @@ export default function İletisim() {
                         <p className="p-3">Ofisimize gelmeden projelerimiz hakkında bilgi almak için bizi arayabilirsiniz.</p>
                         <div className="flex items-center">
                             <FontAwesomeIcon icon={faPhone} className="text-brand-yellow" size="2x"/>
-                            <div className="font-thin">0533 652 1107 / 0537 217 7918</div>
+                            <div className="font-thin">{companyData?.contactNumber1} / {companyData?.contactNumber2}</div>
                         </div>
                     </div>              
                 </div>

@@ -1,22 +1,37 @@
 'use client'
 
+// Fonts
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image"
-import Link from "next/link"
 import { faPhone, } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+// Next & React Components/Variables
+import Image from "next/image"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react";
+
+// Speacial Types
+import { CompanyInformationType } from "@/types";    
 
 export default function Footer() {
+
     const pathName = usePathname();
+    const [companyData, setCompanyData] = useState<CompanyInformationType>();
     const navLinks = [
         { label: "Anasayfa", href: "/" },
         { label: "Hakkımızda", href: "/hakkimizda" },
         { label: "Projeler", href: "/projeler" },
-        { label: "İletişim", href: "/iletisim" },
-    ]
-
+        { label: "İletişim", href: "/iletisim" },]
+        
+    useEffect(() => {
+        fetch("https://localhost:7048/CompanyInformation")
+        .then(res => res.json())
+        .then((data:CompanyInformationType) => setCompanyData(data))
+        .catch((err) => console.error(err))
+    }, []);
+        
     return (
         <footer>
             <div className="flex flex-col justify-between items-center lg:flex-row gap-8 bg-[url('/images/biz-kimiz.png')] bg-black/90 bg-cover bg-center p-16">
@@ -27,7 +42,7 @@ export default function Footer() {
                     height={36}/>
 
                 <div className="text-white w-[40vw]">
-                    İstanbul’da modern yaşam alanları üreten Demirel Grup İnşaat; güven ve süreklilik ilkelerini gözeterek gerçekleştirdiği projelerle sektöre katkı sağlamaktadır. Köklü birikimiyle güvenilirliğinden taviz vermeden müşterilerinin beklentilerini karşılamaktadır.
+                    {companyData?.footerText}
                 </div>
 
                 <div className="flex flex-col gap-1">
@@ -46,12 +61,12 @@ export default function Footer() {
                     <div className="mt-2">                        
                         <div className="flex gap-2">
                             <FontAwesomeIcon icon={faPhone}/>
-                            <div className="font-bold">0533 652 1107</div>
+                            <div className="font-bold">{companyData?.contactNumber1}</div>
                         </div>
 
                         <div className="flex gap-2">
                             <FontAwesomeIcon icon={faPhone}/>
-                            <div className="font-bold">0537 217 7918</div>
+                            <div className="font-bold">{companyData?.contactNumber2}</div>
                         </div>
                     </div>
                   <div className="flex gap-3 mt-2">
