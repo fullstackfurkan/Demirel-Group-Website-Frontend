@@ -3,12 +3,22 @@
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Project } from '@/types';
 
 export default function PhotoSlider() {
 
     const [projectData, setProjectData] = useState<Project[]>([]);
+
+    useEffect(() => {
+        fetch('https://localhost:7048/Projects')
+        .then(res => res.json())
+        .then(data => 
+            {setProjectData(data)
+                console.log(data);
+            })
+    }, [])
+
     return (
         <section>
             <Swiper

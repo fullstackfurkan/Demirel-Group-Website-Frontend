@@ -13,13 +13,19 @@ export type Project = {
     id: number,
     title: string,
     category: string,
-    startDate: Date,
-    endDate: Date,
+    startDate: string,
+    endDate: string,
     area: string,
     apartmentType: string,
     numberOfApartment: number,
     numberOfStore: number,
     contactNumber: string,
     details: string,
-    photos: string[]
+    photos: ProjectPhoto[]
 };
+
+type ProjectPhoto = {
+    id: number,
+    projectId: number,
+    photoUrl: string
+}
