@@ -27,7 +27,19 @@ export default function PhotoSlider() {
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
                 loop>
-                <SwiperSlide>
+                    {projectData.map((project) => (
+                        <SwiperSlide key={project.id}>
+                            <div className='relative w-full h-[85vh]'>
+                                <Image 
+                                    src={project.photos[0].photoUrl}
+                                    alt="logo"
+                                    fill
+                                    className='object-cover'
+                                />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                {/* <SwiperSlide>
                     <div className='relative w-full h-[85vh]'>
                         <Image 
                             src="/images/proje1/örnek1.jpg"
@@ -56,7 +68,7 @@ export default function PhotoSlider() {
                             className='object-cover'
                         />
                    </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
         </section>
     ) 
