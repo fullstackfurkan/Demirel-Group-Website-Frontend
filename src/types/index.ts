@@ -17,8 +17,6 @@ export type Project = {
     endDate: string,
     area: string,
     apartmentType: string,
-    numberOfApartment: number,
-    numberOfStore: number,
     contactNumber: string,
     details: string,
     photos: ProjectPhoto[]
