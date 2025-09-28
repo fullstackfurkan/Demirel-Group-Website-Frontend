@@ -1,7 +1,7 @@
 export type CompanyInformationType = {
     id: number,
     aboutUsText: string,
-    companyAdress: string, 
+    companyAdress: string,
     companyEmail: string,
     companyName: string,
     contactNumber1: string,
@@ -18,6 +18,8 @@ export type Project = {
     area: string,
     apartmentType: string,
     contactNumber: string,
+    location: string,
+    mapEmbedUrl: string,
     details: string,
     photos: ProjectPhoto[]
 };

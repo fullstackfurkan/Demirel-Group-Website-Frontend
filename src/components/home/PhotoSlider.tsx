@@ -13,12 +13,14 @@ export default function PhotoSlider() {
 
     useEffect(() => {
         fetch('https://localhost:7048/Projects')
-        .then(res => res.json())
-        .then(data => 
-            {setProjectData(data)
+            .then(res => res.json())
+            .then(data => {
+                setProjectData(data)
                 console.log(data);
             })
     }, [])
+
+    if (!projectData) return <div className="text-center py-20">Yükleniyor...</div>;
 
     return (
         <section>
@@ -29,21 +31,21 @@ export default function PhotoSlider() {
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
                 loop>
-                    {projectData.map((project) => (
-                        <SwiperSlide key={project.id}>
-                            <div className='relative w-full h-[85vh]'>
-                                <Link href={"/projeler"}>
-                                    <Image 
-                                        src={project.photos[0].photoUrl}
-                                        alt='logo'
-                                        fill
-                                        className='object-cover'
-                                    />
-                                </Link>
-                            </div>
-                        </SwiperSlide>
-                    ))}    
+                {projectData.map((project) => (
+                    <SwiperSlide key={project.id}>
+                        <div className='relative w-full h-[85vh]'>
+                            <Link href={"/projeler"}>
+                                <Image
+                                    src={project.photos[0].photoUrl}
+                                    alt='logo'
+                                    fill
+                                    className='object-cover'
+                                />
+                            </Link>
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </section>
-    ) 
+    )
 }
