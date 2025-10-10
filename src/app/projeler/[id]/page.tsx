@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { CompanyInformationType, Project } from "@/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays, faLayerGroup, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faBuilding, faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,13 +20,13 @@ export default function ProjectDetailPage() {
     const parameter = useParams();
 
     useEffect(() => {
-        fetch(`https://localhost:7048/Projects/${parameter.id}`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Projects/${parameter.id}`)
             .then(res => res.json())
             .then(data => setProjectData(data));
     }, [parameter.id]);
 
     useEffect(() => {
-        fetch(`https://localhost:7048/CompanyInformation`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
             .then(res => res.json())
             .then(data => setCompanyData(data));
     }, []);
@@ -112,7 +113,7 @@ export default function ProjectDetailPage() {
 }
 
 // Tek bir bilgi kutusu component’i
-function InfoItem({ icon, label, value }: { icon: any; label: string; value?: string }) {
+function InfoItem({ icon, label, value }: { icon: IconDefinition; label: string; value?: string }) {
     return (
         <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={icon} size="2x" className="text-brand-yellow" />

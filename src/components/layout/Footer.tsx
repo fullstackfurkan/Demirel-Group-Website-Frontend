@@ -26,7 +26,7 @@ export default function Footer() {
         { label: "İletişim", href: "/iletisim" },]
 
     useEffect(() => {
-        fetch("https://localhost:7048/CompanyInformation")
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
             .then(res => res.json())
             .then((data: CompanyInformationType) => setCompanyData(data))
             .catch((err) => console.error(err))

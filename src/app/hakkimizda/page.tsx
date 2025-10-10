@@ -9,7 +9,7 @@ export default function Hakkımızda() {
     const [companyData, setCompanyData] = useState<CompanyInformationType>();
 
     useEffect(() => {
-        fetch('https://localhost:7048/CompanyInformation')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
         .then(res => res.json())
         .then(data => setCompanyData(data))
         .catch(err => console.error(err));

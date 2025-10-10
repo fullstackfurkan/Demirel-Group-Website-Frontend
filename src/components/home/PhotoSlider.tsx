@@ -12,7 +12,7 @@ export default function PhotoSlider() {
     const [projectData, setProjectData] = useState<Project[]>([]);
 
     useEffect(() => {
-        fetch('https://localhost:7048/Projects')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Projects`)
             .then(res => res.json())
             .then(data => {
                 setProjectData(data)
