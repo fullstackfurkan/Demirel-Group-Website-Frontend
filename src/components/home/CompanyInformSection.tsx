@@ -7,19 +7,19 @@ export default function CompanyInformSection() {
 
     const allField = [
         { 
-            fieldName: "Demirel İnşaat",
-            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            fieldName: "Demireller Group İnşaat",
+            explanation: "Demireller Group, modern mimariyi estetik ve sağlamlıkla buluşturan projelere imza atmaktadır. Kaliteli malzeme, yenilikçi tasarım ve uzman kadrosu ile güvenilir yaşam alanları inşa eden Demireller Group, sektördeki deneyimiyle hayallerinizi gerçeğe dönüştürüyor. Her projede müşteri memnuniyetini ön planda tutarak geleceğe değer katıyoruz.",
             icon: faHelmetSafety,
             href: "/projects/proje1"
          },
          { 
-            fieldName: "Demirel Galeri",
-            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            fieldName: "Demireller Group Galeri",
+            explanation: "Demireller Group kalitesiyle sizlere sunduğumuz galerimizde, güvenilir ve seçkin araç seçeneklerini bulabilirsiniz. Her bütçeye uygun, bakımları yapılmış ve güvenliği test edilmiş araçlarımızla, araç sahibi olmanın keyfini sorunsuz bir şekilde yaşamanız için çalışıyoruz. Güven, şeffaflık ve müşteri odaklı hizmet anlayışımızla Demireller Group farkını hissedin.",
             icon: faCar,
             href: "/projects/proje1"
          },{ 
-            fieldName: "Demirel Gayrimenkul",
-            explanation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora architecto accusantium, nihil sunt laborum ab animi exercitationem ea voluptates delectus repudiandae ipsum placeat voluptatibus, laudantium, recusandae maxime sed provident ex totam pariatur libero natus! Fugit esse itaque omnis explicabo?",
+            fieldName: "Demireller Group Gayrimenkul",
+            explanation: "Gayrimenkul sektöründe güvenin adresi Demireller Group, yatırım ve yaşam için en doğru çözümleri sunuyor. Satılık konut, villa ve arsa seçenekleriyle müşterilerimize değerli fırsatlar sağlıyoruz. Uzman ekibimizle birlikte, ihtiyaçlarınıza uygun gayrimenkulü bulmanıza yardımcı oluyor, Demireller Group güvencesiyle geleceğinize yatırım yapmanızı sağlıyoruz.",
             icon: faBuilding,
             href: "/projects/proje1"
          }
