@@ -1,0 +1,6 @@
+{
+    "name" : "worker-name",
+    "compatibility_date": "2025-12-09",
+    "main" : "src/app/page.tsx",
+    "assets" : "./public/images"
+}
