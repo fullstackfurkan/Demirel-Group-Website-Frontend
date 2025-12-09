@@ -14,6 +14,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+export const runtime = 'edge';
+
 export default function ProjectDetailPage() {
     const [projectData, setProjectData] = useState<Project>();
     const [companyData, setCompanyData] = useState<CompanyInformationType>();
