@@ -45,6 +45,7 @@ export default function ProjectDetailPage() {
                     width={800}
                     height={500}
                     className="object-cover rounded-md"
+                    unoptimized={true}
                 />
             </div>
 
@@ -85,6 +86,7 @@ export default function ProjectDetailPage() {
                                         alt="project photo"
                                         fill
                                         className="object-cover"
+                                        unoptimized={true}
                                     />
                                 </div>
                             </SwiperSlide>
