@@ -31,7 +31,8 @@ export default function Navbar() {
                 src="/images/logo.png"
                 alt="Logo" 
                 width={100}
-                height={16}/>
+                height={16}
+                unoptimized={true}/>
                 </div>
 
                 {/* Desktop Navbar Menü */}

@@ -41,7 +41,8 @@ export default function Footer() {
                     src="/images/logo.png"
                     alt="Logo"
                     width={200}
-                    height={36} />
+                    height={36}
+                    unoptimized={true} />
 
                 <div className="text-white w-[40vw]">
                     {companyData?.footerText}

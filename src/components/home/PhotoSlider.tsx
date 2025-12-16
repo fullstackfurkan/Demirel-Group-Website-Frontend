@@ -40,6 +40,7 @@ export default function PhotoSlider() {
                                     alt='logo'
                                     fill
                                     className='object-cover'
+                                    unoptimized={true}
                                 />
                             </Link>
                         </div>

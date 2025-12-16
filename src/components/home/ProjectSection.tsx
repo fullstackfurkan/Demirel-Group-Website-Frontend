@@ -33,6 +33,7 @@ export default function ProjectSection() {
                                     alt={project.title}
                                     fill
                                     className="object-cover rounded-t-lg"
+                                    unoptimized={true}
                                 />
                             </div>
                             <div className="flex flex-col items-center p-4 font-thin">

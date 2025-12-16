@@ -31,6 +31,7 @@ export default function Hakkımızda() {
                             width={1000}
                             height={750}
                             className='object-cover bg-brand-black relative z-10 p-5 mt-5 md:mt-0'
+                            unoptimized={true}
                             />
                         </div>
                         <h3 className="text-brand-yellow text-xl mb-3 font-bold">{companyData?.companyName}</h3>
