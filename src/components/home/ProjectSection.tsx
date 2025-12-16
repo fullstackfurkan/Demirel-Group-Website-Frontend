@@ -26,7 +26,7 @@ export default function ProjectSection() {
                 <div className="text-center text-3xl font-thin mb-5">PROJELERİMİZ</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-3">
                     {projectData.map((project) => (
-                        <Link key={project.id} href={`/src/app/(public)/projeler/${project.id}`} className="lg:w-[25vw] cursor-pointer hover:shadow-brand-yellow shadow-xl rounded-lg transition-shadow duration-300 bg-white">
+                        <Link key={project.id} href={`/projeler/${project.id}`} className="lg:w-[25vw] cursor-pointer hover:shadow-brand-yellow shadow-xl rounded-lg transition-shadow duration-300 bg-white">
                             <div className="relative w-full h-64 overflow-hidden">
                                 <Image
                                     src={project.photos[0].photoUrl}
