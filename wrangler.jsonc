@@ -2,8 +2,5 @@
     "name": "demireller-group-frontend",
     "compatibility_date": "2025-12-09",
     "compatibility_flags": ["nodejs_compat"],
-    "pages_build_output_dir": ".vercel/output/static",
-    "vars": {
-        "NEXT_PUBLIC_API_URL": "https://demirel-group-website-backend.onrender.com"
-    }
+    "pages_build_output_dir": ".vercel/output/static"
 }
