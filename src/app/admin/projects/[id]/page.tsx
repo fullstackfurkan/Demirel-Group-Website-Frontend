@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { UploadCloud, X } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function ProjectForm() {
   const router = useRouter();
   const params = useParams();
