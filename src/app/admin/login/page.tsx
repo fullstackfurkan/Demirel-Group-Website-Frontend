@@ -17,7 +17,7 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
       const res = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
