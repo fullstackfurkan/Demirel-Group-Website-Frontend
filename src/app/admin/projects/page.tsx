@@ -9,7 +9,8 @@ export default function AdminProjectsList() {
   const [loading, setLoading] = useState(true);
 
   const fetchProjects = () => {
-    fetch('https://api.demirellergroup.com.tr/projects')
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+    fetch(`${API_URL}/projects`)
       .then(res => res.json())
       .then(data => {
         setProjects(data);
@@ -34,7 +35,8 @@ export default function AdminProjectsList() {
     
     const token = getCookie('token');
     try {
-      const res = await fetch(`https://api.demirellergroup.com.tr/projects/${id}`, {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+      const res = await fetch(`${API_URL}/projects/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

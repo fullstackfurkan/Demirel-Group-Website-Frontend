@@ -8,7 +8,8 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     // Projeleri çekip sayısını gösterelim
-    fetch('https://api.demirellergroup.com.tr/projects')
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+    fetch(`${API_URL}/projects`)
       .then(res => res.json())
       .then(data => setStats({ projects: data.length || 0, loading: false }))
       .catch(() => setStats({ projects: 0, loading: false }));

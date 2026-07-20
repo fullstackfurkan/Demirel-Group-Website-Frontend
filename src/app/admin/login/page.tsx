@@ -17,7 +17,8 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const res = await fetch('https://api.demirellergroup.com.tr/auth/login', {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })

@@ -17,7 +17,8 @@ export default function AdminCompany() {
   });
 
   useEffect(() => {
-    fetch('https://api.demirellergroup.com.tr/CompanyInformation')
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+    fetch(`${API_URL}/CompanyInformation`)
       .then(res => res.json())
       .then(data => {
         if (data) {
@@ -51,7 +52,8 @@ export default function AdminCompany() {
     const token = getCookie('token');
 
     try {
-      const res = await fetch('https://api.demirellergroup.com.tr/CompanyInformation', {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+      const res = await fetch(`${API_URL}/CompanyInformation`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

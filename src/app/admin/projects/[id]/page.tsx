@@ -29,7 +29,8 @@ export default function ProjectForm() {
 
   useEffect(() => {
     if (!isNew) {
-      fetch(`https://api.demirellergroup.com.tr/projects/${params.id}`)
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
+      fetch(`${API_URL}/projects/${params.id}`)
         .then(res => res.json())
         .then(data => {
           setFormData({
@@ -93,9 +94,10 @@ export default function ProjectForm() {
       submitData.append('DeletedPhotoIds', id.toString());
     });
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.demirellergroup.com.tr';
     const url = isNew 
-      ? 'https://api.demirellergroup.com.tr/projects' 
-      : `https://api.demirellergroup.com.tr/projects/${params.id}`;
+      ? `${API_URL}/projects` 
+      : `${API_URL}/projects/${params.id}`;
       
     const method = isNew ? 'POST' : 'PUT';
 
