@@ -12,7 +12,7 @@ export default function Iletisim() {
     const [companyData, setCompanyData] = useState<CompanyInformationType>();
 
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
+        fetch(`https://demirel-group-website-backend.onrender.com/CompanyInformation`)
         .then(res => res.json())
         .then(data => setCompanyData(data))
         .catch(err=> console.error(err));

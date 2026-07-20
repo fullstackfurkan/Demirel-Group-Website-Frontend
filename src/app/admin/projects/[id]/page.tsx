@@ -29,7 +29,7 @@ export default function ProjectForm() {
 
   useEffect(() => {
     if (!isNew) {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
+      const API_URL = 'https://demirel-group-website-backend.onrender.com' || 'https://demirel-group-website-backend.onrender.com';
       fetch(`${API_URL}/projects/${params.id}`)
         .then(res => res.json())
         .then(data => {
@@ -94,7 +94,7 @@ export default function ProjectForm() {
       submitData.append('DeletedPhotoIds', id.toString());
     });
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
+    const API_URL = 'https://demirel-group-website-backend.onrender.com' || 'https://demirel-group-website-backend.onrender.com';
     const url = isNew 
       ? `${API_URL}/projects` 
       : `${API_URL}/projects/${params.id}`;

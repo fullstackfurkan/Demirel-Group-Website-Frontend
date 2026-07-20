@@ -9,7 +9,7 @@ export default function AdminProjectsList() {
   const [loading, setLoading] = useState(true);
 
   const fetchProjects = () => {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
+    const API_URL = 'https://demirel-group-website-backend.onrender.com' || 'https://demirel-group-website-backend.onrender.com';
     fetch(`${API_URL}/projects`)
       .then(res => res.json())
       .then(data => {
@@ -35,7 +35,7 @@ export default function AdminProjectsList() {
     
     const token = getCookie('token');
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
+      const API_URL = 'https://demirel-group-website-backend.onrender.com' || 'https://demirel-group-website-backend.onrender.com';
       const res = await fetch(`${API_URL}/projects/${id}`, {
         method: 'DELETE',
         headers: {

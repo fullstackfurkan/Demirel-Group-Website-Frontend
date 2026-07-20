@@ -12,7 +12,7 @@ export default function PhotoSlider() {
     const [projectData, setProjectData] = useState<Project[]>([]);
 
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Projects`)
+        fetch(`https://demirel-group-website-backend.onrender.com/Projects`)
             .then(res => res.json())
             .then(data => {
                 setProjectData(data)

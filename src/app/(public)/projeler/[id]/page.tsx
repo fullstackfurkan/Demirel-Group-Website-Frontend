@@ -22,13 +22,13 @@ export default function ProjectDetailPage() {
     const parameter = useParams();
 
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Projects/${parameter.id}`)
+        fetch(`https://demirel-group-website-backend.onrender.com/Projects/${parameter.id}`)
             .then(res => res.json())
             .then(data => setProjectData(data));
     }, [parameter.id]);
 
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
+        fetch(`https://demirel-group-website-backend.onrender.com/CompanyInformation`)
             .then(res => res.json())
             .then(data => setCompanyData(data));
     }, []);

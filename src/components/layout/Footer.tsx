@@ -26,7 +26,7 @@ export default function Footer() {
         { label: "İletişim", href: "/iletisim" },]
 
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CompanyInformation`)
+        fetch(`https://demirel-group-website-backend.onrender.com/CompanyInformation`)
             .then(res => res.json())
             .then((data: CompanyInformationType) => setCompanyData(data))
             .catch((err) => console.error(err))

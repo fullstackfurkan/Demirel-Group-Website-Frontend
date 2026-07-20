@@ -8,7 +8,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     // Projeleri çekip sayısını gösterelim
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demirel-group-website-backend.onrender.com';
+    const API_URL = 'https://demirel-group-website-backend.onrender.com' || 'https://demirel-group-website-backend.onrender.com';
     fetch(`${API_URL}/projects`)
       .then(res => res.json())
       .then(data => setStats({ projects: data.length || 0, loading: false }))
